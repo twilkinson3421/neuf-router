@@ -28,3 +28,7 @@ export async function dirExists(path: string): Promise<boolean> {
 export function rel(from: string, to: string): string {
     return relative(from, to);
 }
+
+export function relFactory(from: string): (to: string) => string {
+    return (to: string) => rel(from, to);
+}

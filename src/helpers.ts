@@ -1,4 +1,4 @@
-import type * as T from "./types.ts";
+import type * as T from "@neuf/types/router";
 import * as fs from "./fs.ts";
 
 export function initPathData(req: Request, fsRoot: string): T.PathData {
@@ -18,10 +18,6 @@ export function initPathData(req: Request, fsRoot: string): T.PathData {
             searchParams: new URLSearchParams(req.url),
         },
     };
-}
-
-export function relFactory(from: string): (to: string) => string {
-    return (to: string) => fs.rel(from, to);
 }
 
 export function joinerFactory(base: string): (str: string) => string {

@@ -1,14 +1,14 @@
 {
     "name": "@neuf/router",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "exports": {
         ".": "./mod.ts",
-        "./types": "./src/types.ts",
         "./defaults": "./src/defaults.ts"
     },
     "license": "MIT",
     "imports": {
         "@exts/list": "jsr:@exts/list@^0.3.5",
+        "@neuf/types": "jsr:@neuf/types@^0.9.0",
         "@std/path": "jsr:@std/path@^1.0.8"
     }
 }

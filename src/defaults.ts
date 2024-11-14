@@ -1,4 +1,4 @@
-import type * as T from "./types.ts";
+import type * as T from "@neuf/types/router";
 
 /**
  * A default router options object.

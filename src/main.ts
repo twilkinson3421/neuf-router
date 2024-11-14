@@ -1,4 +1,4 @@
-import type * as T from "./types.ts";
+import type * as T from "@neuf/types/router";
 import * as h from "./helpers.ts";
 import * as fs from "./fs.ts";
 import { List } from "@exts/list";
@@ -23,7 +23,7 @@ async function getPathData(
     opts: T.RouterOptions
 ): Promise<T.PathData> {
     const data = h.initPathData(req, opts.fsRoot);
-    const rel = h.relFactory(opts.importFrom);
+    const rel = fs.relFactory(opts.importFrom);
 
     for (const seg of segements.items) {
         const dir = data.paths.dir;
